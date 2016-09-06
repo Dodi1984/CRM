@@ -13,13 +13,6 @@ namespace WebApplication.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
@@ -27,6 +20,17 @@ namespace WebApplication.Controllers
             return View();
         }
 
+        public IActionResult PersoaneFizice()
+        {
+            ViewData["Message"] = "Asta e cod din c# din  controller";
+            return View();
+        }
+
+        public IActionResult PersoaneJuridice()
+        {
+            ViewData["Message"] = "Asta e cod din c# din  controller";
+            return View();
+        }
         public IActionResult Error()
         {
             return View();
