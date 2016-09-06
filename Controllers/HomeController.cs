@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using CRM.Models;
 
 namespace WebApplication.Controllers
 {
@@ -20,10 +21,12 @@ namespace WebApplication.Controllers
             return View();
         }
 
+        // Get /home/PersoaneFizice
         public IActionResult PersoaneFizice()
         {
-            ViewData["Message"] = "Asta e cod din c# din  controller";
-            return View();
+            ViewData["Message"] = "Asta e o persoana";
+            var person = new Person() { FirstName = "Dan", LastName = "Niculescu", BirthDate = new DateTime(1984, 10, 10) };
+            return View(person);
         }
 
         public IActionResult PersoaneJuridice()

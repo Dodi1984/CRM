@@ -1,7 +1,13 @@
+@model Person
 @{
     ViewData["Title"] = "Persoane Fizice";
 }
 <h2>@ViewData["Title"].</h2>
 <h3>@ViewData["Message"]</h3>
+<ul>
+    <li>First: @Model.FirstName</li>
+    <li>Last: @Model.LastName</li>
+    <li>BirthDay: @Model.BirthDate.ToString("dd.MM.yyyy")</li>
+</ul>
 
 <p>Persoane Fizice ATA.</p>
