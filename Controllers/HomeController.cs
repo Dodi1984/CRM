@@ -21,14 +21,22 @@ namespace WebApplication.Controllers
             return View();
         }
 
-        // Get /home/PersoaneFizice
+        // Get /home/PersoaneFizice      
+        [HttpGet]
         public IActionResult PersoaneFizice()
         {
-            ViewData["Message"] = "Asta e o persoana";
-            var person = new Person() { FirstName = "Dan", LastName = "Niculescu", BirthDate = new DateTime(1984, 10, 10) };
-            return View(person);
+            ViewData["Message"] = "Example";
+            var examplePerson = new Person() { FirstName = "Dan", LastName = "Niculescu", BirthDate = new DateTime(1984, 10, 10) };
+            return View(examplePerson);
         }
 
+        // POST - add new person to db
+        [HttpPost]
+        public IActionResult PersoaneFizice(Person personIn)
+        {
+            ViewData["Message"] = "You have added :";
+            return View(personIn);
+        }
         public IActionResult PersoaneJuridice()
         {
             ViewData["Message"] = "Asta e cod din c# din  controller";
