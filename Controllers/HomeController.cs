@@ -33,9 +33,7 @@ namespace WebApplication.Controllers
         // Get /home/PersoaneFizice      
         [HttpGet]
         public IActionResult PersoaneFizice()
-        {
-            List<Person> persons = new List<Person>();
-            ViewData["Message"] = "Persons list";            
+        {                      
             var prs = from c in context.Person
                       select c;
             return View(prs.ToList());
@@ -45,7 +43,7 @@ namespace WebApplication.Controllers
         public IActionResult AddNewPerson()
         {
             ViewData["Message"] = "Example :";
-            Person examplePerson = new Person() { FirstName = "Dan", LastName = "Niculescu", BirthDate = "10.10.1984", CNP = 1841010440085 };
+            Person examplePerson = new Person() { FirstName = "Dan", LastName = "Niculescu", BirthDate = new DateTime(10/10/1984), CNP = 1841010440085 };
             return View(examplePerson);
         }
 
