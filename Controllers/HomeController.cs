@@ -12,9 +12,9 @@ namespace WebApplication.Controllers
     {
         private CrmContext context;
 
-        public HomeController(CrmContext contextt)
+        public HomeController(CrmContext context)
         {
-            context = contextt;
+            this.context = context;
         }
 
         public IActionResult Index()
@@ -33,7 +33,7 @@ namespace WebApplication.Controllers
         // Get /home/PersoaneFizice      
         [HttpGet]
         public IActionResult PersoaneFizice()
-        {                      
+        {
             var prs = from c in context.Person
                       select c;
             return View(prs.ToList());
@@ -43,7 +43,7 @@ namespace WebApplication.Controllers
         public IActionResult AddNewPerson()
         {
             ViewData["Message"] = "Example :";
-            Person examplePerson = new Person() { FirstName = "Dan", LastName = "Niculescu", BirthDate = new DateTime(10/10/1984), CNP = 1841010440085 };
+            Person examplePerson = new Person() { FirstName = "Dan", LastName = "Niculescu", BirthDate = new DateTime(10 / 10 / 1984), CNP = 1841010440085 };
             return View(examplePerson);
         }
 
@@ -59,13 +59,17 @@ namespace WebApplication.Controllers
         #endregion
 
         #region Persoane Juridice
+
+
         public IActionResult PersoaneJuridice()
         {
-            ViewData["Message"] = "Asta e cod din c# din  controller";
-            return View();
-        }
+            var cmp = from c in context.Company
+                      select c;
 
+            return View(cmp.ToList());
+        }
         #endregion
+
         public IActionResult Error()
         {
             return View();

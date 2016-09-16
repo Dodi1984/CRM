@@ -1,7 +1,26 @@
-@{
-    ViewData["Title"] = "Persoane Fizice";
-}
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
+@model List<Company>
+
+
+<table class="table">
+    <tr class="active">
+        <td class="alert-warning">Name</td>
+        <td class="alert-warning">City</td>
+        <td class="alert-warning">CUI</td>
+        <td class="alert-warning">J</td>
+        <td class="alert-warning">Adress</td>
+        <td class="alert-warning">FieldOfActivity</td>       
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr class="active">
+            <td class="info">@item.Name</td>
+            <td class="info">@item.City</td>
+            <td class="info">@item.CUI</td>
+            <td class="info">@item.J</td>
+            <td class="info">@item.Adress</td>
+            <td class="info">@item.FieldOfActivity</td>
+        </tr>
+    }
+</table>
 
 <p>Persoane Juridice ATA.</p>
