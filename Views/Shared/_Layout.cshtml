@@ -39,7 +39,15 @@
                             <li><a asp-controller="Home" asp-action="PersoaneFizice">Show Entire List</a></li>
                         </ul>
                     </li>
-                    <li><a asp-controller="Home" asp-action="PersoaneJuridice">Persoane Juridice</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persoane Juridice<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Home" asp-action="AddNewCompany">Add New Company</a></li>
+                            <li><a href="#">Edit existing Company</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a asp-controller="Home" asp-action="PersoaneJuridice">Show Entire List</a></li>
+                        </ul>
+                    </li>
                     <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
 
                 </ul>

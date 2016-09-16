@@ -60,7 +60,7 @@ namespace WebApplication.Controllers
 
         #region Persoane Juridice
 
-
+        [HttpGet]
         public IActionResult PersoaneJuridice()
         {
             var cmp = from c in context.Company
@@ -68,6 +68,24 @@ namespace WebApplication.Controllers
 
             return View(cmp.ToList());
         }
+
+        [HttpGet]
+        public IActionResult AddNewCompany()
+        {
+            ViewData["Message"] = "Example :";
+            Company exampleCompany = new Company() { Name = "Dan", City = "Bucharest", CUI = "123456" , J = "236/2008" };
+            return View(exampleCompany);
+        }
+
+        [HttpPost]
+        public IActionResult AddNewCompany(Company companyIn)
+        {
+            ViewData["Message"] = "You Have added :";
+            context.Add(companyIn);
+            context.SaveChanges();
+            return View(companyIn);
+        }
+
         #endregion
 
         public IActionResult Error()

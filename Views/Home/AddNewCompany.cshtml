@@ -2,31 +2,142 @@
 
 
 
-@*<h3>@ViewData["Message"]</h3>
+<h3>@ViewData["Message"]</h3>
 <ul>
-    <li>First: @Model.FirstName</li>
-    <li>Last: @Model.LastName</li>
-    <li>BirthDay: @Model.BirthDate</li>
-</ul>*@
+    <li>First: @Model.Name</li>
+    <li>Last: @Model.City</li>
+    <li>BirthDay: @Model.CUI</li>
+    <li>BirthDay: @Model.J</li>
+</ul>
 
-@*<form asp-controller="Home" asp-action="PersoaneFizice" method="POST">
+<form asp-controller="Home" asp-action="AddNewCompany" method="POST">
     <div class="form-group">
-        <label for="firstname">First :</label>
-        <input class="form-control" type="text" id="firstname" asp-for="Model[0].FirstName"/>
+        <label for="firstname">Name :</label>
+        <input class="form-control" type="text" id="name" asp-for="Name"/>
     </div>
 
     <div class="form-group">
-        <label for="lastname">Last :</label>
-        <input class="form-control" type="text" id="lastname" asp-for="Model.newPerson.LastName" /> 
+        <label for="lastname">City :</label>
+        <input class="form-control" type="text" id="city" asp-for="City" /> 
     </div>
 
     <div class="form-group">
-        <label for="firstname">Birth Date :</label>
-        <input class="form-control" type="text" id="birthday" asp-for="Model.newPerson.BirthDate" placeholder="29.02.1984"/>
+        <label for="firstname">CUI :</label>
+        <input class="form-control" type="text" id="cui" asp-for="CUI" />
     </div>    
     
+    <div class="form-group">
+        <label for="firstname">J :</label>
+        <input class="form-control" type="text" id="j" asp-for="J" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Adress :</label>
+        <input class="form-control" type="text" id="adress" asp-for="Adress" />
+    </div>        
+    
+    <div class="form-group">
+        <label for="firstname">Field of activity :</label>
+        <input class="form-control" type="text" id="fieldOfActivity" asp-for="FieldOfActivity" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">PreviousContract(bool) :</label>
+        <input class="form-control" type="text" id="previousContract" asp-for="PreviousContract" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">HasAutoPark(bool) :</label>
+        <input class="form-control" type="text" id="hasAutoPark" asp-for="HasAutoPark" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Nr Of Drivers(int) :</label>
+        <input class="form-control" type="text" id="nrOfDrivers" asp-for="NrOfDrivers" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">What services they want :</label>
+        <input class="form-control" type="text" id="servicesOfInterest" asp-for="ServicesOfInterest" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Date of the first contact :</label>
+        <input class="form-control" type="text" id="dateOfTheFirstContact" asp-for="DateOfTheFirstContact" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Date of the second contact :</label>
+        <input class="form-control" type="text" id="dateOfTheSecondContact" asp-for="DateOfTheSecondContact" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Date of the third contact :</label>
+        <input class="form-control" type="text" id="dateOfTheThirdContact" asp-for="DateOfTheThirdContact" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Date of the fourth contact :</label>
+        <input class="form-control" type="text" id="dateOfTheFourthContact" asp-for="DateOfTheFourthContact" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Date of the fifth contact :</label>
+        <input class="form-control" type="text" id="dateOfTheFifthContact" asp-for="DateOfTheFifthContact" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Notes from the first discussion :</label>
+        <input class="form-control" type="text" id="discution1" asp-for="Discution1" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Notes from the second discussion :</label>
+        <input class="form-control" type="text" id="discution2" asp-for="Discution2" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Notes from the third discussion :</label>
+        <input class="form-control" type="text" id="discution3" asp-for="Discution3" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Notes from the fourth discussion :</label>
+        <input class="form-control" type="text" id="discution4" asp-for="Discution4" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Notes from the fifth discussion :</label>
+        <input class="form-control" type="text" id="discution5" asp-for="Discution5" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">general discussion :</label>
+        <input class="form-control" type="text" id="longDiscutions" asp-for="LongDiscutions" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Callback date :</label>
+        <input class="form-control" type="text" id="callBackDate" asp-for="CallBackDate" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Course LVL1 :</label>
+        <input class="form-control" type="text" id="courseLvl1" asp-for="CourseLvl1" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Course LVL2 :</label>
+        <input class="form-control" type="text" id="courseLvl2" asp-for="CourseLvl2" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">Course LVL3 :</label>
+        <input class="form-control" type="text" id="courseLvl3" asp-for="CourseLvl3" />
+    </div>    
+
     <button class="btn btn-danger" type="submit" value="Submit">Submit</button>
-</form>*@
+</form>
 
 
 
