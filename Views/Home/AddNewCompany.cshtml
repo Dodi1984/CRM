@@ -12,128 +12,173 @@
 
 <form asp-controller="Home" asp-action="AddNewCompany" method="POST">
     <div class="form-group">
-        <label for="firstname">Name :</label>
+        <label for="name">Name :</label>
         <input class="form-control" type="text" id="name" asp-for="Name"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label for="lastname">City :</label>
+        <label for="city">City :</label>
         <input class="form-control" type="text" id="city" asp-for="City" /> 
+        <span asp-validation-for="City" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label for="firstname">CUI :</label>
+        <label for="cui">CUI :</label>
         <input class="form-control" type="text" id="cui" asp-for="CUI" />
+        <span asp-validation-for="CUI" class="text-danger"></span>
     </div>    
     
     <div class="form-group">
-        <label for="firstname">J :</label>
+        <label for="j">J :</label>
         <input class="form-control" type="text" id="j" asp-for="J" />
+        <span asp-validation-for="J" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label for="firstname">Adress :</label>
+        <label for="adress">Adress :</label>
         <input class="form-control" type="text" id="adress" asp-for="Adress" />
+        <span asp-validation-for="Adress" class="text-danger"></span>
     </div>        
     
     <div class="form-group">
-        <label for="firstname">Field of activity :</label>
+        <label for="fieldOfActivity">Field of activity :</label>
         <input class="form-control" type="text" id="fieldOfActivity" asp-for="FieldOfActivity" />
+        <span asp-validation-for="FieldOfActivity" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">PreviousContract(bool) :</label>
+        <label for="previousContact">PreviousContract(bool) :</label>
         <input class="form-control" type="text" id="previousContract" asp-for="PreviousContract" />
+        <span asp-validation-for="PreviousContact" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">HasAutoPark(bool) :</label>
+        <label for="hasAutoPark">HasAutoPark(bool) :</label>
         <input class="form-control" type="text" id="hasAutoPark" asp-for="HasAutoPark" />
+        <span asp-validation-for="HasAutoPark" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Nr Of Drivers(int) :</label>
+        <label for="nrOfDrivers">Nr Of Drivers(int) :</label>
         <input class="form-control" type="text" id="nrOfDrivers" asp-for="NrOfDrivers" />
+        <span asp-validation-for="NrOfDrivers" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">What services they want :</label>
+        <label for="servicesOfInterest">What services they want :</label>
         <input class="form-control" type="text" id="servicesOfInterest" asp-for="ServicesOfInterest" />
+        <span asp-validation-for="ServicesOfInterest" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Date of the first contact :</label>
+        <label for="dateOfTheFirstContact">Date of the first contact :</label>
         <input class="form-control" type="text" id="dateOfTheFirstContact" asp-for="DateOfTheFirstContact" />
+        <span asp-validation-for="DateOfTheFirstContact" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Date of the second contact :</label>
+        <label for="dateOfTheSecondContact">Date of the second contact :</label>
         <input class="form-control" type="text" id="dateOfTheSecondContact" asp-for="DateOfTheSecondContact" />
+        <span asp-validation-for="DateOfTheSecondContact" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Date of the third contact :</label>
+        <label for="dateOfTheThirdContact">Date of the third contact :</label>
         <input class="form-control" type="text" id="dateOfTheThirdContact" asp-for="DateOfTheThirdContact" />
+        <span asp-validation-for="DateOfTheThirdContact" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Date of the fourth contact :</label>
+        <label for="dateOfTheFourthContac">Date of the fourth contact :</label>
         <input class="form-control" type="text" id="dateOfTheFourthContact" asp-for="DateOfTheFourthContact" />
+        <span asp-validation-for="DateOfTheFourthContact" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Date of the fifth contact :</label>
+        <label for="dateOfTheFifthContact">Date of the fifth contact :</label>
         <input class="form-control" type="text" id="dateOfTheFifthContact" asp-for="DateOfTheFifthContact" />
+        <span asp-validation-for="DateOfTheFifthContact" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Notes from the first discussion :</label>
+        <label for="discution1">Notes from the first discussion :</label>
         <input class="form-control" type="text" id="discution1" asp-for="Discution1" />
+        <span asp-validation-for="Discution1" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Notes from the second discussion :</label>
+        <label for="discution2">Notes from the second discussion :</label>
         <input class="form-control" type="text" id="discution2" asp-for="Discution2" />
+        <span asp-validation-for="Discution2" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Notes from the third discussion :</label>
+        <label for="discution3">Notes from the third discussion :</label>
         <input class="form-control" type="text" id="discution3" asp-for="Discution3" />
+        <span asp-validation-for="Discution3" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Notes from the fourth discussion :</label>
+        <label for="discution4">Notes from the fourth discussion :</label>
         <input class="form-control" type="text" id="discution4" asp-for="Discution4" />
+        <span asp-validation-for="Discution4" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Notes from the fifth discussion :</label>
+        <label for="discution5">Notes from the fifth discussion :</label>
         <input class="form-control" type="text" id="discution5" asp-for="Discution5" />
+        <span asp-validation-for="Discution5" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">general discussion :</label>
+        <label for="longDiscutions">general discussion :</label>
         <input class="form-control" type="text" id="longDiscutions" asp-for="LongDiscutions" />
+        <span asp-validation-for="LongDiscutions" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Callback date :</label>
+        <label for="callBackDate">Callback date :</label>
         <input class="form-control" type="text" id="callBackDate" asp-for="CallBackDate" />
+        <span asp-validation-for="CallBackDate" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Course LVL1 :</label>
+        <label for="courseLvl1">Course LVL1 :</label>
         <input class="form-control" type="text" id="courseLvl1" asp-for="CourseLvl1" />
+        <span asp-validation-for="CourseLvl1" class="text-danger"></span>
+       
     </div>
 
     <div class="form-group">
-        <label for="firstname">Course LVL2 :</label>
+        <label for="courseLvl2">Course LVL2 :</label>
         <input class="form-control" type="text" id="courseLvl2" asp-for="CourseLvl2" />
+        <span asp-validation-for="CourseLvl2" class="text-danger"></span>
+        
     </div>
 
     <div class="form-group">
-        <label for="firstname">Course LVL3 :</label>
+        <label for="courseLvl3">Course LVL3 :</label>
         <input class="form-control" type="text" id="courseLvl3" asp-for="CourseLvl3" />
+        <span asp-validation-for="CourseLvl3" class="text-danger"></span>
+        
     </div>    
 
     <button class="btn btn-danger" type="submit" value="Submit">Submit</button>
