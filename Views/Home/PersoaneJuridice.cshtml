@@ -1,8 +1,10 @@
 @model List<Company>
 
 <form asp-controller="Home" asp-action="AddNewCompany" method="POST">
-    <label for="name">Name :</label>
-        <input class="form-control" id ="name" />
+    <label for="name">Filter: </label>
+    <input class="form-control" id ="name" />
+    <input class="form-control" id ="city" />
+    <input class="form-control" id ="CUI" />
 </form>
 
 <table class="table">
