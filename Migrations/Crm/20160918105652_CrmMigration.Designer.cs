@@ -8,7 +8,7 @@ using WebApplication.Data;
 namespace CRM.Migrations.Crm
 {
     [DbContext(typeof(CrmContext))]
-    [Migration("20160911142008_CrmMigration")]
+    [Migration("20160918105652_CrmMigration")]
     partial class CrmMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,55 +21,76 @@ namespace CRM.Migrations.Crm
                     b.Property<int>("CompanyId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Adress");
+                    b.Property<string>("Adress")
+                        .IsRequired();
 
-                    b.Property<string>("CUI");
+                    b.Property<string>("CUI")
+                        .HasAnnotation("MaxLength", 50);
 
-                    b.Property<DateTime>("CallBackDate");
+                    b.Property<string>("CallBackDate")
+                        .IsRequired();
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 50);
 
-                    b.Property<string>("CourseLvl1");
+                    b.Property<bool>("CourseLvl1");
 
-                    b.Property<string>("CourseLvl2");
+                    b.Property<bool>("CourseLvl2");
 
-                    b.Property<string>("CourseLvl3");
+                    b.Property<bool>("CourseLvl3");
 
-                    b.Property<DateTime>("DateOfTheFifthContact");
+                    b.Property<string>("DateOfTheFifthContact")
+                        .IsRequired();
 
-                    b.Property<DateTime>("DateOfTheFirstContact");
+                    b.Property<string>("DateOfTheFirstContact")
+                        .IsRequired();
 
-                    b.Property<DateTime>("DateOfTheFourthContact");
+                    b.Property<string>("DateOfTheFourthContact")
+                        .IsRequired();
 
-                    b.Property<DateTime>("DateOfTheSecondContact");
+                    b.Property<string>("DateOfTheSecondContact")
+                        .IsRequired();
 
-                    b.Property<DateTime>("DateOfTheThirdContact");
+                    b.Property<string>("DateOfTheThirdContact")
+                        .IsRequired();
 
-                    b.Property<string>("Discution1");
+                    b.Property<string>("Discution1")
+                        .IsRequired();
 
-                    b.Property<string>("Discution2");
+                    b.Property<string>("Discution2")
+                        .IsRequired();
 
-                    b.Property<string>("Discution3");
+                    b.Property<string>("Discution3")
+                        .IsRequired();
 
-                    b.Property<string>("Discution4");
+                    b.Property<string>("Discution4")
+                        .IsRequired();
 
-                    b.Property<string>("Discution5");
+                    b.Property<string>("Discution5")
+                        .IsRequired();
 
-                    b.Property<string>("FieldOfActivity");
+                    b.Property<string>("FieldOfActivity")
+                        .IsRequired();
 
                     b.Property<bool>("HasAutoPark");
 
-                    b.Property<string>("J");
+                    b.Property<string>("J")
+                        .IsRequired();
 
-                    b.Property<string>("LongDiscutions");
+                    b.Property<string>("LongDiscutions")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 50);
 
                     b.Property<int>("NrOfDrivers");
 
                     b.Property<bool>("PreviousContract");
 
-                    b.Property<string>("ServicesOfInterest");
+                    b.Property<string>("ServicesOfInterest")
+                        .IsRequired();
 
                     b.HasKey("CompanyId");
 

@@ -96,15 +96,15 @@ namespace CRM.Models
 
         [Required]
 
-        public string CourseLvl1 { get; set; }
+        public bool CourseLvl1 { get; set; }
 
         [Required]
 
-        public string CourseLvl2 { get; set; }
+        public bool CourseLvl2 { get; set; }
 
         [Required]
 
-        public string CourseLvl3 { get; set; }
+        public bool CourseLvl3 { get; set; }
 
         [Required]
 

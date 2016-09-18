@@ -80,17 +80,15 @@ namespace WebApplication.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         // public async Task<IActionResult> AddNewCompany(Company companyIn)
-        public async Task<IActionResult> AddNewCompany([Bind("Name,City,CUI,J,Adress,FieldOfActivity,PreviousContact,HasAutoPark,NrOfDrivers,ServicesOfInterest,DateOfTheFirstContact,DateOfTheSecondContact,DateOfTheThirdContact,DateOfTheFourthContact,DateOfTheFifthContact, Discution1, Discution2, Discution3, Discution4, Discution5, LongDiscutions, CallBackDate, CourseLvL1, CourseLvl2, CourseLvl3")] Company companyIn)
+        public async Task<IActionResult> AddNewCompany([Bind("Name, City, CUI, J, Adress, HasAutoPark")] Company companyIn)
         {
 
-            if (ModelState.IsValid)
-            {
+            
                 ViewData["Message"] = "You Have added :";
                 context.Add(companyIn);
                 await context.SaveChangesAsync();
                 return View(companyIn);
-            }
-            ViewData["Message"] = "Please fill all mandatory field:";
+            
             return View(companyIn);
         }
 

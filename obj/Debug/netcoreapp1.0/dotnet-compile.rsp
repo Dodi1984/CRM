@@ -237,8 +237,8 @@ h:\GIT\CRM\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 h:\GIT\CRM\Migrations\20160907213958_PersonSchema.cs
 h:\GIT\CRM\Migrations\20160907213958_PersonSchema.Designer.cs
 h:\GIT\CRM\Migrations\ApplicationDbContextModelSnapshot.cs
-h:\GIT\CRM\Migrations\Crm\20160911142008_CrmMigration.cs
-h:\GIT\CRM\Migrations\Crm\20160911142008_CrmMigration.Designer.cs
+h:\GIT\CRM\Migrations\Crm\20160918105652_CrmMigration.cs
+h:\GIT\CRM\Migrations\Crm\20160918105652_CrmMigration.Designer.cs
 h:\GIT\CRM\Migrations\Crm\CrmContextModelSnapshot.cs
 h:\GIT\CRM\Models\ApplicationUser.cs
 h:\GIT\CRM\Models\Company.cs
