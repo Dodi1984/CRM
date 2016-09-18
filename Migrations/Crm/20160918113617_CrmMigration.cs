@@ -18,9 +18,9 @@ namespace CRM.Migrations.Crm
                     CUI = table.Column<string>(maxLength: 50, nullable: false),
                     CallBackDate = table.Column<string>(nullable: true),
                     City = table.Column<string>(maxLength: 50, nullable: false),
-                    CourseLvl1 = table.Column<bool>(nullable: true),
-                    CourseLvl2 = table.Column<bool>(nullable: true),
-                    CourseLvl3 = table.Column<bool>(nullable: true),
+                    CourseLvl1 = table.Column<bool>(nullable: false),
+                    CourseLvl2 = table.Column<bool>(nullable: false),
+                    CourseLvl3 = table.Column<bool>(nullable: false),
                     DateOfTheFifthContact = table.Column<string>(nullable: true),
                     DateOfTheFirstContact = table.Column<string>(nullable: true),
                     DateOfTheFourthContact = table.Column<string>(nullable: true),
@@ -36,8 +36,8 @@ namespace CRM.Migrations.Crm
                     J = table.Column<string>(nullable: false),
                     LongDiscutions = table.Column<string>(nullable: true),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
-                    NrOfDrivers = table.Column<int>(nullable: true),
-                    PreviousContract = table.Column<bool>(nullable: true),
+                    NrOfDrivers = table.Column<int>(nullable: false),
+                    PreviousContract = table.Column<bool>(nullable: false),
                     ServicesOfInterest = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

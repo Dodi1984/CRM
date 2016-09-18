@@ -1,8 +1,13 @@
 @model List<Company>
 
+<form asp-controller="Home" asp-action="AddNewCompany" method="POST">
+    <label for="name">Name :</label>
+        <input class="form-control" id ="name" />
+</form>
 
 <table class="table">
     <tr class="active">
+        <td class="alert-warning">ID</td>        
         <td class="alert-warning">Name</td>
         <td class="alert-warning">City</td>
         <td class="alert-warning">CUI</td>
@@ -11,8 +16,9 @@
         <td class="alert-warning">FieldOfActivity</td>       
     </tr>
     @foreach (var item in Model)
-    {
+    {        
         <tr class="active">
+            <td class="info">@item.CompanyId</td>                 
             <td class="info">@item.Name</td>
             <td class="info">@item.City</td>
             <td class="info">@item.CUI</td>

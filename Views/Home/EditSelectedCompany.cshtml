@@ -1,14 +1,7 @@
 @model Company
 
-<h3>@ViewData["Message"]</h3>
-<ul>
-    <li>First: @Model.Name</li>
-    <li>Last: @Model.City</li>
-    <li>BirthDay: @Model.CUI</li>
-    <li>BirthDay: @Model.J</li>
-</ul>
 
-<form asp-controller="Home" asp-action="AddNewCompany" method="POST">
+<form asp-controller="Home" asp-action="EditSelectedCompany" method="POST">
     <div class="form-group">
         <label asp-for="Name">Name :</label>
         <input class="form-control" asp-for="Name"/>

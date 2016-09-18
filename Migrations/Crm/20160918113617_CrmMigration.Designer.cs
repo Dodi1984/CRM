@@ -8,7 +8,7 @@ using WebApplication.Data;
 namespace CRM.Migrations.Crm
 {
     [DbContext(typeof(CrmContext))]
-    [Migration("20160918105652_CrmMigration")]
+    [Migration("20160918113617_CrmMigration")]
     partial class CrmMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,10 +25,10 @@ namespace CRM.Migrations.Crm
                         .IsRequired();
 
                     b.Property<string>("CUI")
+                        .IsRequired()
                         .HasAnnotation("MaxLength", 50);
 
-                    b.Property<string>("CallBackDate")
-                        .IsRequired();
+                    b.Property<string>("CallBackDate");
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -40,46 +40,34 @@ namespace CRM.Migrations.Crm
 
                     b.Property<bool>("CourseLvl3");
 
-                    b.Property<string>("DateOfTheFifthContact")
-                        .IsRequired();
+                    b.Property<string>("DateOfTheFifthContact");
 
-                    b.Property<string>("DateOfTheFirstContact")
-                        .IsRequired();
+                    b.Property<string>("DateOfTheFirstContact");
 
-                    b.Property<string>("DateOfTheFourthContact")
-                        .IsRequired();
+                    b.Property<string>("DateOfTheFourthContact");
 
-                    b.Property<string>("DateOfTheSecondContact")
-                        .IsRequired();
+                    b.Property<string>("DateOfTheSecondContact");
 
-                    b.Property<string>("DateOfTheThirdContact")
-                        .IsRequired();
+                    b.Property<string>("DateOfTheThirdContact");
 
-                    b.Property<string>("Discution1")
-                        .IsRequired();
+                    b.Property<string>("Discution1");
 
-                    b.Property<string>("Discution2")
-                        .IsRequired();
+                    b.Property<string>("Discution2");
 
-                    b.Property<string>("Discution3")
-                        .IsRequired();
+                    b.Property<string>("Discution3");
 
-                    b.Property<string>("Discution4")
-                        .IsRequired();
+                    b.Property<string>("Discution4");
 
-                    b.Property<string>("Discution5")
-                        .IsRequired();
+                    b.Property<string>("Discution5");
 
-                    b.Property<string>("FieldOfActivity")
-                        .IsRequired();
+                    b.Property<string>("FieldOfActivity");
 
                     b.Property<bool>("HasAutoPark");
 
                     b.Property<string>("J")
                         .IsRequired();
 
-                    b.Property<string>("LongDiscutions")
-                        .IsRequired();
+                    b.Property<string>("LongDiscutions");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -89,8 +77,7 @@ namespace CRM.Migrations.Crm
 
                     b.Property<bool>("PreviousContract");
 
-                    b.Property<string>("ServicesOfInterest")
-                        .IsRequired();
+                    b.Property<string>("ServicesOfInterest");
 
                     b.HasKey("CompanyId");
 

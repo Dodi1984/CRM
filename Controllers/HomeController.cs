@@ -19,7 +19,15 @@ namespace WebApplication.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<string> list = new List<string>();
+            list.Add("abc");
+            list.Add("defg");
+            list.Add("fdbc");
+            list.Add("aghjk");
+            list.Add("apljk");
+            list.Add("vbhjk");
+            list.Add("bhjk");
+            return View(list);
         }
 
         public IActionResult Contact()
@@ -83,12 +91,14 @@ namespace WebApplication.Controllers
         public async Task<IActionResult> AddNewCompany([Bind("Name, City, CUI, J, Adress, HasAutoPark")] Company companyIn)
         {
 
-            
+            if (ModelState.IsValid)
+            {
                 ViewData["Message"] = "You Have added :";
                 context.Add(companyIn);
                 await context.SaveChangesAsync();
                 return View(companyIn);
-            
+            }
+            ViewData["Message"] = "Please fill all mandatory field:";
             return View(companyIn);
         }
 
