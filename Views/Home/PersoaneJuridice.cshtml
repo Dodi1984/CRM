@@ -3,8 +3,6 @@
 <form asp-controller="Home" asp-action="AddNewCompany" method="POST">
     <label for="name">Filter: </label>
     <input class="form-control" id ="name" />
-    <input class="form-control" id ="city" />
-    <input class="form-control" id ="CUI" />
 </form>
 
 <table class="table">
@@ -15,11 +13,11 @@
         <td class="alert-warning">CUI</td>
         <td class="alert-warning">J</td>
         <td class="alert-warning">Adress</td>
-        <td class="alert-warning">FieldOfActivity</td>       
+        <td class="alert-warning">FieldOfActivity</td>
     </tr>
     @foreach (var item in Model)
     {        
-        <tr class="active">
+        <tr id="companies" class="active">
             <td class="info">@item.CompanyId</td>                 
             <td class="info">@item.Name</td>
             <td class="info">@item.City</td>
