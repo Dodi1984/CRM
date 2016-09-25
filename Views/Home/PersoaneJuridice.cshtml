@@ -1,8 +1,11 @@
 @model List<Company>
 
+@section Scripts{
+    <script type="text/javascript" src="~/js/searchAsYouType.js"></script>
+}
 <form asp-controller="Home" asp-action="AddNewCompany" method="POST">
     <label for="name">Filter: </label>
-    <input class="form-control" id ="name" />
+    <input class="form-control" id ="name" onkeypress="onFilterChange()"/>
 </form>
 
 <table class="table">
