@@ -5,29 +5,29 @@
 }
 <form asp-controller="Home" asp-action="AddNewCompany" method="POST">
     <label for="name">Filter: </label>
-    <input class="form-control" id ="name" onkeypress="onFilterChange()"/>
+    <input class="form-control" id ="filter" onkeyup="App.onFilterChange()"/>
 </form>
 
-<table class="table">
-    <tr class="active">
-        <td class="alert-warning">ID</td>        
-        <td class="alert-warning">Name</td>
-        <td class="alert-warning">City</td>
-        <td class="alert-warning">CUI</td>
-        <td class="alert-warning">J</td>
-        <td class="alert-warning">Adress</td>
-        <td class="alert-warning">FieldOfActivity</td>
+<table class="table table-hover">
+    <tr class="danger">
+        <th class="danger">ID</th>        
+        <th class="danger">Name</th>
+        <th class="danger">City</th>
+        <th class="danger">CUI</th>
+        <th class="danger">J</th>
+        <th class="danger">Adress</th>
+        <th class="danger">FieldOfActivity</td>
     </tr>
     @foreach (var item in Model)
     {        
-        <tr id="companies" class="active">
-            <td class="info">@item.CompanyId</td>                 
-            <td class="info">@item.Name</td>
-            <td class="info">@item.City</td>
-            <td class="info">@item.CUI</td>
-            <td class="info">@item.J</td>
-            <td class="info">@item.Adress</td>
-            <td class="info">@item.FieldOfActivity</td>
+        <tr id="companies" class="info">
+            <td class="alert-warning">@item.CompanyId</td>                 
+            <td class="alert-warning">@item.Name</td>
+            <td class="alert-warning">@item.City</td>
+            <td class="alert-warning">@item.CUI</td>
+            <td class="alert-warning">@item.J</td>
+            <td class="alert-warning">@item.Adress</td>
+            <td class="alert-warning">@item.FieldOfActivity</td>
         </tr>
     }
 </table>
