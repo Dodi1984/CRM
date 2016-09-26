@@ -33,33 +33,47 @@ namespace CRM.Migrations.Crm
                         .IsRequired()
                         .HasAnnotation("MaxLength", 50);
 
-                    b.Property<bool>("CourseLvl1");
+                    b.Property<bool>("CourseLvl1")
+                        .IsRequired();
 
-                    b.Property<bool>("CourseLvl2");
+                    b.Property<bool>("CourseLvl2")
+                        .IsRequired();
 
-                    b.Property<bool>("CourseLvl3");
+                    b.Property<bool>("CourseLvl3")
+                        .IsRequired();
 
-                    b.Property<string>("DateOfTheFifthContact");
+                    b.Property<string>("DateOfTheFifthContact")
+                        .IsRequired();
 
-                    b.Property<string>("DateOfTheFirstContact");
+                    b.Property<string>("DateOfTheFirstContact")
+                        .IsRequired();
 
-                    b.Property<string>("DateOfTheFourthContact");
+                    b.Property<string>("DateOfTheFourthContact")
+                        .IsRequired();
 
-                    b.Property<string>("DateOfTheSecondContact");
+                    b.Property<string>("DateOfTheSecondContact")
+                        .IsRequired();
 
-                    b.Property<string>("DateOfTheThirdContact");
+                    b.Property<string>("DateOfTheThirdContact")
+                        .IsRequired();
 
-                    b.Property<string>("Discution1");
+                    b.Property<string>("Discution1")
+                        .IsRequired();
 
-                    b.Property<string>("Discution2");
+                    b.Property<string>("Discution2")
+                        .IsRequired();
 
-                    b.Property<string>("Discution3");
+                    b.Property<string>("Discution3")
+                        .IsRequired();
 
-                    b.Property<string>("Discution4");
+                    b.Property<string>("Discution4")
+                        .IsRequired();
 
-                    b.Property<string>("Discution5");
+                    b.Property<string>("Discution5")
+                        .IsRequired();
 
-                    b.Property<string>("FieldOfActivity");
+                    b.Property<string>("FieldOfActivity")
+                        .IsRequired();
 
                     b.Property<bool>("HasAutoPark");
 
@@ -72,11 +86,14 @@ namespace CRM.Migrations.Crm
                         .IsRequired()
                         .HasAnnotation("MaxLength", 50);
 
-                    b.Property<int>("NrOfDrivers");
+                    b.Property<int>("NrOfDrivers")
+                        .IsRequired();
 
-                    b.Property<bool>("PreviousContract");
+                    b.Property<bool>("PreviousContract")
+                        .IsRequired();
 
-                    b.Property<string>("ServicesOfInterest");
+                    b.Property<string>("ServicesOfInterest")
+                        .IsRequired();
 
                     b.HasKey("CompanyId");
 
