@@ -30,9 +30,9 @@ namespace CRM.Models
         public string FieldOfActivity { get; set; }
 
         public bool PreviousContract { get; set; }
-       
-        public bool HasAutoPark { get; set; }
 
+        public bool HasAutoPark { get; set; }
+        
         public int NrOfDrivers { get; set; }
 
         public string ServicesOfInterest { get; set; }
