@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CRM.Migrations.Crm
 {
-    public partial class CrmMigration : Migration
+    public partial class crmMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,9 +18,9 @@ namespace CRM.Migrations.Crm
                     CUI = table.Column<string>(maxLength: 50, nullable: false),
                     CallBackDate = table.Column<string>(nullable: true),
                     City = table.Column<string>(maxLength: 50, nullable: false),
-                    CourseLvl1 = table.Column<bool>(nullable: false),
-                    CourseLvl2 = table.Column<bool>(nullable: false),
-                    CourseLvl3 = table.Column<bool>(nullable: false),
+                    CourseLvl1 = table.Column<bool>(nullable: true),
+                    CourseLvl2 = table.Column<bool>(nullable: true),
+                    CourseLvl3 = table.Column<bool>(nullable: true),
                     DateOfTheFifthContact = table.Column<string>(nullable: true),
                     DateOfTheFirstContact = table.Column<string>(nullable: true),
                     DateOfTheFourthContact = table.Column<string>(nullable: true),
@@ -32,12 +32,12 @@ namespace CRM.Migrations.Crm
                     Discution4 = table.Column<string>(nullable: true),
                     Discution5 = table.Column<string>(nullable: true),
                     FieldOfActivity = table.Column<string>(nullable: true),
-                    HasAutoPark = table.Column<bool>(nullable: false),
+                    HasAutoPark = table.Column<bool>(nullable: true),
                     J = table.Column<string>(nullable: false),
                     LongDiscutions = table.Column<string>(nullable: true),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
-                    NrOfDrivers = table.Column<int>(nullable: false),
-                    PreviousContract = table.Column<bool>(nullable: false),
+                    NrOfDrivers = table.Column<int>(nullable: true),
+                    PreviousContract = table.Column<bool>(nullable: true),
                     ServicesOfInterest = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

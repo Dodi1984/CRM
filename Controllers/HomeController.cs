@@ -88,9 +88,8 @@ namespace WebApplication.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         // public async Task<IActionResult> AddNewCompany(Company companyIn)
-        public async Task<IActionResult> AddNewCompany([Bind("Name, City, CUI, J, Adress, HasAutoPark, FieldOfActivity")] Company companyIn)
+        public async Task<IActionResult> AddNewCompany([Bind("Name, City, CUI, J, Adress, HasAutoPark")] Company companyIn)
         {
-
             if (ModelState.IsValid)
             {
                 ViewData["Message"] = "You Have added :";

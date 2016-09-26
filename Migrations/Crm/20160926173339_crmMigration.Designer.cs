@@ -8,8 +8,8 @@ using WebApplication.Data;
 namespace CRM.Migrations.Crm
 {
     [DbContext(typeof(CrmContext))]
-    [Migration("20160918113617_CrmMigration")]
-    partial class CrmMigration
+    [Migration("20160926173339_crmMigration")]
+    partial class crmMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

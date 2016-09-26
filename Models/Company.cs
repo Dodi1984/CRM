@@ -26,12 +26,11 @@ namespace CRM.Models
 
         [Required]
         public string Adress { get; set; }
-       
+
         public string FieldOfActivity { get; set; }
 
         public bool PreviousContract { get; set; }
-
-        [Required]
+       
         public bool HasAutoPark { get; set; }
 
         public int NrOfDrivers { get; set; }
